@@ -1,0 +1,17 @@
+// тестийн өнгийг тохируулах
+@function set-text-color($color) {
+    @if(lightness($color) > 50) {
+        @return #333;
+    }
+    @else {
+        @return #fff
+    }
+}
+
+// transform mixin
+@mixin transfrom($property) {
+    -webkit-transfrom: $property;
+    -ms-transform: $property;
+    -moz-transform: $property;
+    transform: $property;
+}
